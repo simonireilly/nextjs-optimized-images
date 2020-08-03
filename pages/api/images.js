@@ -17,6 +17,7 @@ export default async (req, res) => {
 
         res.statusCode = 200
         res.setHeader('Cache-Control', 'public, s-maxage=31536000, maxage=31536000')
+        res.setHeader('Content-Type', 'image/*')
         res.end(resizesBuffer)
       }
     )

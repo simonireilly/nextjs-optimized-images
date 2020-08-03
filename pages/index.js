@@ -7,19 +7,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <img
-        src={`/api/images?src=${pictureUrl}&w=1200`}
         srcSet={`
           /api/images?src=${pictureUrl}&w=1200 1200w,
-          /api/images?src=${pictureUrl}&w=1000 1000w,
-          /api/images?src=${pictureUrl}&w=800 800w,
-          /api/images?src=${pictureUrl}&w=480 480w
+          /api/images?src=${pictureUrl}&w=800 800w
           `}
-        sizes="
-          (min-width: 1000px) 1200px,
-          (max-width: 1000px) and (min-width: 800px) 1000px,
-          (max-width: 800px) and (min-width: 600px) 800px,
-          480px
-        "
+        sizes="(min-width: 400px) 40vw, 100vw"
          />
     </div>
   )
